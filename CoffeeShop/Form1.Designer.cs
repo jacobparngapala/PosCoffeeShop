@@ -43,10 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.PAKITAMO = new System.Windows.Forms.CheckBox();
             this.LOGIN = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.BAWALYAN = new System.Windows.Forms.ErrorProvider(this.components);
-            this.CASHIERNGANI = new System.Windows.Forms.Button();
-            this.ADMINNGANI = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BAWALYAN)).BeginInit();
@@ -208,49 +205,15 @@
             this.LOGIN.UseVisualStyleBackColor = false;
             this.LOGIN.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(385, 299);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 17);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "LOG IN AS:";
-            // 
             // BAWALYAN
             // 
             this.BAWALYAN.ContainerControl = this;
-            // 
-            // CASHIERNGANI
-            // 
-            this.CASHIERNGANI.Image = global::CoffeeShop.Properties.Resources.cashier_creme__1_;
-            this.CASHIERNGANI.Location = new System.Drawing.Point(565, 335);
-            this.CASHIERNGANI.Name = "CASHIERNGANI";
-            this.CASHIERNGANI.Size = new System.Drawing.Size(161, 38);
-            this.CASHIERNGANI.TabIndex = 11;
-            this.CASHIERNGANI.UseVisualStyleBackColor = true;
-            this.CASHIERNGANI.Click += new System.EventHandler(this.CASHIERNGANI_Click);
-            // 
-            // ADMINNGANI
-            // 
-            this.ADMINNGANI.Image = global::CoffeeShop.Properties.Resources.admin_creme__1_;
-            this.ADMINNGANI.Location = new System.Drawing.Point(388, 335);
-            this.ADMINNGANI.Name = "ADMINNGANI";
-            this.ADMINNGANI.Size = new System.Drawing.Size(161, 38);
-            this.ADMINNGANI.TabIndex = 10;
-            this.ADMINNGANI.UseVisualStyleBackColor = true;
-            this.ADMINNGANI.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 522);
-            this.Controls.Add(this.CASHIERNGANI);
-            this.Controls.Add(this.ADMINNGANI);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.LOGIN);
             this.Controls.Add(this.PAKITAMO);
             this.Controls.Add(this.PASSWORDNGANI);
@@ -290,9 +253,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button ADMINNGANI;
-        private System.Windows.Forms.Button CASHIERNGANI;
         private System.Windows.Forms.ErrorProvider BAWALYAN;
     }
 }

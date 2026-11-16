@@ -113,6 +113,7 @@
             this.checkBox1.TabIndex = 15;
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtBoxPassword
             // 
@@ -120,7 +121,6 @@
             this.txtBoxPassword.Location = new System.Drawing.Point(385, 238);
             this.txtBoxPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBoxPassword.Name = "txtBoxPassword";
-            this.txtBoxPassword.PasswordChar = '*';
             this.txtBoxPassword.Size = new System.Drawing.Size(326, 26);
             this.txtBoxPassword.TabIndex = 14;
             // 
@@ -184,7 +184,6 @@
             this.txtBoxConfirmPassword.Location = new System.Drawing.Point(385, 302);
             this.txtBoxConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBoxConfirmPassword.Name = "txtBoxConfirmPassword";
-            this.txtBoxConfirmPassword.PasswordChar = '*';
             this.txtBoxConfirmPassword.Size = new System.Drawing.Size(326, 26);
             this.txtBoxConfirmPassword.TabIndex = 18;
             // 
@@ -223,7 +222,7 @@
             "Cashier",
             "Admin"});
             this.cmbBoxUsertype.Location = new System.Drawing.Point(385, 374);
-            this.cmbBoxUsertype.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBoxUsertype.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBoxUsertype.Name = "cmbBoxUsertype";
             this.cmbBoxUsertype.Size = new System.Drawing.Size(149, 21);
             this.cmbBoxUsertype.TabIndex = 19;

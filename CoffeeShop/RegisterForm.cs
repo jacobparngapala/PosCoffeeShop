@@ -18,6 +18,8 @@ namespace CoffeeShop
         public RegisterForm()
         {
             InitializeComponent();
+            txtBoxPassword.UseSystemPasswordChar = true;
+            txtBoxConfirmPassword.UseSystemPasswordChar = true;
         }
 
 
@@ -119,5 +121,12 @@ namespace CoffeeShop
         {
             Application.Exit();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtBoxPassword.UseSystemPasswordChar = !checkBox1.Checked;
+            txtBoxConfirmPassword.UseSystemPasswordChar = !checkBox1.Checked;
+        }
     }
 }
+

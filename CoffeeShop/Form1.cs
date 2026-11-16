@@ -54,22 +54,6 @@ namespace CoffeeShop
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            selectedRole = "Admin";
-
-            ADMINNGANI.Image = Properties.Resources.admin_brown__1_;
-            CASHIERNGANI.Image = Properties.Resources.cashier_creme__1_;
-        }
-
-        private void CASHIERNGANI_Click(object sender, EventArgs e)
-        {
-            selectedRole = "Cashier";
-
-            ADMINNGANI.Image = Properties.Resources.admin_creme__1_;
-            CASHIERNGANI.Image = Properties.Resources.cashier_brown__1_;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             BAWALYAN.Clear();
@@ -97,13 +81,12 @@ namespace CoffeeShop
                 conn.Open();
             }
 
-            cmd.CommandText = "SELECT * FROM user_data WHERE Username = @user AND Password = @pass AND UserType = @utype";
+            cmd.CommandText = "SELECT * FROM user_data WHERE Username = @user AND Password = @pass";
             cmd.Connection = conn;
 
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@user", USNGANI.Text);
             cmd.Parameters.AddWithValue("@pass", PASSWORDNGANI.Text);
-            cmd.Parameters.AddWithValue("@utype", selectedRole);
             dr = cmd.ExecuteReader();
             dr.Read();
 
@@ -112,14 +95,14 @@ namespace CoffeeShop
                 string role = dr[3].ToString();
                 MessageBox.Show("Login Successful!");
 
-                if (role == "Admin")
+                if (role.ToLower() == "admin")
                 {
                     AdminMainForm form1 = new AdminMainForm();  
                     form1.MdiParent = this.MdiParent;
 
                     form1.Show();
                 }
-                else if (role == "Cashier")
+                else if (role.ToLower() == "cashier")
                 {
                     CashierForm form2 = new CashierForm();
                     form2.MdiParent= this.MdiParent;
@@ -142,5 +125,6 @@ namespace CoffeeShop
             form.Show();
             this.Hide();
         }
+
     }
 }
